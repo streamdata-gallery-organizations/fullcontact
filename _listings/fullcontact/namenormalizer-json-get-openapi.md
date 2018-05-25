@@ -3,8 +3,10 @@ swagger: "2.0"
 x-collection-name: FullContact
 x-complete: 0
 info:
-  title: FullContact Get Icon
-  description: Get Icon
+  title: FullContact Name Normalization
+  description: The Name Normalization method takes quasi-structured name data provided
+    as a string and outputs the data in a structured manner. It also returns a likelihood
+    based only on the order of the given name and family name as seen in the US population.
   termsOfService: https://www.fullcontact.com/terms/
   version: 1.0.0
 host: api.fullcontact.com
@@ -145,6 +147,95 @@ paths:
           description: OK
       tags:
       - Icons
+  /v2/person.json:
+    get:
+      summary: ""
+      description: Find out more about a person
+      operationId: -v2-person
+      x-api-path-slug: v2person-json-get
+      parameters:
+      - in: query
+        name: email
+        description: The email address you wish to query
+      responses:
+        200:
+          description: OK
+      tags:
+      - People
+  /cardReader:
+    get:
+      summary: Read Card
+      description: Read Card
+      operationId: readCard
+      x-api-path-slug: cardreader-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: This API key is assigned to you by FullContact
+      - in: query
+        name: casing
+        description: Card Reader can alter the casing of certain fields in the final
+          results
+      - in: query
+        name: Custom Params
+        description: Card Reader has the ability to funnel your own custom params
+          through requests
+      - in: query
+        name: format
+        description: Used to specify response in json
+      - in: body
+        name: requestBody
+        description: You can either send in the files as a multipart/form-data request
+          or as a JSON object with BASE64 encoded images
+        schema:
+          $ref: '#/definitions/holder'
+      - in: query
+        name: returnedData
+        description: A response can contain verified and unverified data, this parameter
+          can be used to exclude unverified data from being returned in the response
+      - in: query
+        name: sandbox
+        description: Card Reader Sandbox is a free, quick response mode for testing
+          and development
+      - in: query
+        name: URID
+        description: URID stands for Unique Request Identifier
+      - in: query
+        name: verified
+        description: Used to specify the quality of transcription
+      - in: query
+        name: webhookUrl
+        description: This is the URL that a request will be made to once the card
+          has been processed
+      responses:
+        200:
+          description: OK
+      tags:
+      - Card Reader
+  /name/normalizer.json:
+    get:
+      summary: Name Normalization
+      description: The Name Normalization method takes quasi-structured name data
+        provided as a string and outputs the data in a structured manner. It also
+        returns a likelihood based only on the order of the given name and family
+        name as seen in the US population.
+      operationId: normalizeName
+      x-api-path-slug: namenormalizer-json-get
+      parameters:
+      - in: query
+        name: casing
+        description: Uppercase, lowercase, title case
+      - in: query
+        name: q
+        description: The q parameter allows you to pass a quasi-structured full name
+          string which can include standard prefix, first name, nickname, middle name,
+          last name and suffix
+      responses:
+        200:
+          description: OK
+      tags:
+      - Name
+      - Normalizers
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

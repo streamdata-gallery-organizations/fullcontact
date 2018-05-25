@@ -3,8 +3,10 @@ swagger: "2.0"
 x-collection-name: FullContact
 x-complete: 0
 info:
-  title: FullContact Read Card
-  description: Read Card
+  title: FullContact Location Normalization
+  description: The Location Normalization method takes semi-structured location data
+    via the place parameter, provided as a string, and returns structured location
+    data in either JSON or XML format.
   termsOfService: https://www.fullcontact.com/terms/
   version: 1.0.0
 host: api.fullcontact.com
@@ -210,6 +212,59 @@ paths:
           description: OK
       tags:
       - Card Reader
+  /name/normalizer.json:
+    get:
+      summary: Name Normalization
+      description: The Name Normalization method takes quasi-structured name data
+        provided as a string and outputs the data in a structured manner. It also
+        returns a likelihood based only on the order of the given name and family
+        name as seen in the US population.
+      operationId: normalizeName
+      x-api-path-slug: namenormalizer-json-get
+      parameters:
+      - in: query
+        name: casing
+        description: Uppercase, lowercase, title case
+      - in: query
+        name: q
+        description: The q parameter allows you to pass a quasi-structured full name
+          string which can include standard prefix, first name, nickname, middle name,
+          last name and suffix
+      responses:
+        200:
+          description: OK
+      tags:
+      - Name
+      - Normalizers
+  /address/locationNormalizer.json:
+    get:
+      summary: Location Normalization
+      description: The Location Normalization method takes semi-structured location
+        data via the place parameter, provided as a string, and returns structured
+        location data in either JSON or XML format.
+      operationId: normalizeLocation
+      x-api-path-slug: addresslocationnormalizer-json-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: This API key is assigned to you by FullContact
+      - in: query
+        name: casing
+        description: Uppercase, lowercase, title case
+      - in: query
+        name: includeZeroPopulation
+        description: Appending includeZeroPopulation=true, will display 0 population
+          census locations
+      - in: query
+        name: place
+        description: The place parameter allows you to pass a semi-structured location
+          string which can include continent, country, state, city, or county
+      responses:
+        200:
+          description: OK
+      tags:
+      - Address
+      - Locations
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

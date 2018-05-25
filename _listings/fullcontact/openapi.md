@@ -21,7 +21,7 @@ paths:
       summary: Batch Process
       description: Batch Process
       operationId: batchProcess
-      x-api-path-slug: batchjson-get
+      x-api-path-slug: batch-json-get
       parameters:
       - in: query
         name: apiKey
@@ -41,7 +41,7 @@ paths:
       summary: Get Account Stats
       description: Get Account Stats
       operationId: getAccountStats
-      x-api-path-slug: statsjson-get
+      x-api-path-slug: stats-json-get
       parameters:
       - in: query
         name: apiKey
@@ -60,7 +60,7 @@ paths:
       summary: Lookup Email
       description: Lookup Email
       operationId: lookupEmail
-      x-api-path-slug: emaildisposablejson-get
+      x-api-path-slug: emaildisposable-json-get
       parameters:
       - in: query
         name: apiKey
@@ -79,7 +79,7 @@ paths:
       summary: Get Company
       description: Get Company
       operationId: getCompany
-      x-api-path-slug: companylookupjson-get
+      x-api-path-slug: companylookup-json-get
       parameters:
       - in: query
         name: apiKey
@@ -93,8 +93,8 @@ paths:
         description: The domain of the company being looked up
       - in: query
         name: keyPeople
-        description: ' If true, a list of Executive and VP level employees at this
-          company will be returned under the keyPeople field'
+        description: If true, a list of Executive and VP level employees at this company
+          will be returned under the keyPeople field
       - in: query
         name: prettyPrint
         description: The prettyPrint parameter can be used to disable prettyprint
@@ -150,7 +150,7 @@ paths:
       summary: ""
       description: Find out more about a person
       operationId: -v2-person
-      x-api-path-slug: v2personjson-get
+      x-api-path-slug: v2person-json-get
       parameters:
       - in: query
         name: email
@@ -218,7 +218,7 @@ paths:
         returns a likelihood based only on the order of the given name and family
         name as seen in the US population.
       operationId: normalizeName
-      x-api-path-slug: namenormalizerjson-get
+      x-api-path-slug: namenormalizer-json-get
       parameters:
       - in: query
         name: casing
@@ -241,7 +241,7 @@ paths:
         data via the place parameter, provided as a string, and returns structured
         location data in either JSON or XML format.
       operationId: normalizeLocation
-      x-api-path-slug: addresslocationnormalizerjson-get
+      x-api-path-slug: addresslocationnormalizer-json-get
       parameters:
       - in: query
         name: apiKey

@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: FullContact
 x-complete: 0
 info:
-  title: FullContact Get Icon
-  description: Get Icon
+  title: FullContact Lookup Email
+  description: Lookup Email
   termsOfService: https://www.fullcontact.com/terms/
   version: 1.0.0
 host: api.fullcontact.com
@@ -74,77 +74,6 @@ paths:
           description: OK
       tags:
       - Emails
-  /company/lookup.json:
-    get:
-      summary: Get Company
-      description: Get Company
-      operationId: getCompany
-      x-api-path-slug: companylookup-json-get
-      parameters:
-      - in: query
-        name: apiKey
-        description: This API key is assigned to you by FullContact
-      - in: query
-        name: callback
-        description: If specified, the response will be wrapped as JSONP in a function
-          call
-      - in: query
-        name: domain
-        description: The domain of the company being looked up
-      - in: query
-        name: keyPeople
-        description: If true, a list of Executive and VP level employees at this company
-          will be returned under the keyPeople field
-      - in: query
-        name: prettyPrint
-        description: The prettyPrint parameter can be used to disable prettyprint
-          formatting on the API response
-      responses:
-        200:
-          description: OK
-      tags:
-      - Companies
-  /icon:
-    get:
-      summary: Get Icons
-      description: Get Icons
-      operationId: getIcons
-      x-api-path-slug: icon-get
-      parameters:
-      - in: query
-        name: apiKey
-        description: This API key is assigned to you by FullContact
-      responses:
-        200:
-          description: OK
-      tags:
-      - Icons
-  /icon/{typeId}/{size}/{style}:
-    get:
-      summary: Get Icon
-      description: Get Icon
-      operationId: getIcon
-      x-api-path-slug: icontypeidsizestyle-get
-      parameters:
-      - in: query
-        name: apiKey
-        description: This API key is assigned to you by FullContact
-      - in: path
-        name: size
-        description: The size parameter allows you to specify the size of icon that
-          you want
-      - in: path
-        name: style
-        description: The style parameter allows you to pick from the available styles
-          of the icons
-      - in: path
-        name: typeId
-        description: The typeId is the name of the icon you want
-      responses:
-        200:
-          description: OK
-      tags:
-      - Icons
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

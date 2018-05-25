@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: FullContact
 x-complete: 0
 info:
-  title: FullContact Get Icon
-  description: Get Icon
+  title: FullContact Get Company
+  description: Get Company
   termsOfService: https://www.fullcontact.com/terms/
   version: 1.0.0
 host: api.fullcontact.com
@@ -104,47 +104,6 @@ paths:
           description: OK
       tags:
       - Companies
-  /icon:
-    get:
-      summary: Get Icons
-      description: Get Icons
-      operationId: getIcons
-      x-api-path-slug: icon-get
-      parameters:
-      - in: query
-        name: apiKey
-        description: This API key is assigned to you by FullContact
-      responses:
-        200:
-          description: OK
-      tags:
-      - Icons
-  /icon/{typeId}/{size}/{style}:
-    get:
-      summary: Get Icon
-      description: Get Icon
-      operationId: getIcon
-      x-api-path-slug: icontypeidsizestyle-get
-      parameters:
-      - in: query
-        name: apiKey
-        description: This API key is assigned to you by FullContact
-      - in: path
-        name: size
-        description: The size parameter allows you to specify the size of icon that
-          you want
-      - in: path
-        name: style
-        description: The style parameter allows you to pick from the available styles
-          of the icons
-      - in: path
-        name: typeId
-        description: The typeId is the name of the icon you want
-      responses:
-        200:
-          description: OK
-      tags:
-      - Icons
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
