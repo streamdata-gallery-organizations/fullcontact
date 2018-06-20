@@ -7,8 +7,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullco
 x-kinRank: "9"
 x-alexaRank: "49636"
 tags: FullContact
-created: "2018-05-25"
-modified: "2018-05-25"
+created: "2018-06-19"
+modified: "2018-06-19"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/fullcontact/master/_listings/fullcontact/apis.md
 specificationVersion: "0.14"
 apis:
@@ -16,7 +16,7 @@ apis:
   x-api-slug: fullcontact
   description: Batch Process
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////batch.json
   tags: Batch
   properties:
@@ -26,7 +26,7 @@ apis:
   x-api-slug: fullcontact
   description: Get Account Stats
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////stats.json
   tags: Statistics
   properties:
@@ -38,7 +38,7 @@ apis:
   x-api-slug: fullcontact
   description: Lookup Email
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////email/disposable.json
   tags: Emails
   properties:
@@ -48,7 +48,7 @@ apis:
   x-api-slug: fullcontact
   description: Get Company
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////company/lookup.json
   tags: Companies
   properties:
@@ -60,7 +60,7 @@ apis:
   x-api-slug: fullcontact
   description: Get Icons
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////icon
   tags: Icons
   properties:
@@ -70,7 +70,7 @@ apis:
   x-api-slug: fullcontact
   description: Get Icon
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////icon/{typeId}/{size}/{style}
   tags: Icons
   properties:
@@ -80,7 +80,7 @@ apis:
   x-api-slug: fullcontact
   description: Find out more about a person
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////v2/person.json
   tags: People
   properties:
@@ -90,7 +90,7 @@ apis:
   x-api-slug: fullcontact
   description: Read Card
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////cardReader
   tags: Card Reader
   properties:
@@ -102,7 +102,7 @@ apis:
     as a string and outputs the data in a structured manner. It also returns a likelihood
     based only on the order of the given name and family name as seen in the US population.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////name/normalizer.json
   tags: Name,Normalizers
   properties:
@@ -114,7 +114,7 @@ apis:
     via the place parameter, provided as a string, and returns structured location
     data in either JSON or XML format.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com////address/locationNormalizer.json
   tags: Address,Locations
   properties:
@@ -125,7 +125,7 @@ apis:
   description: Build a clearer picture of your customers in minutes with our data-focused
     APIs. Manage your personal or teams contacts with our contact apps.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/205-fullcontact.jpg
-  humanURL: http://www.fullcontact.com
+  humanURL: http://fullcontact.com
   baseURL: https://api.fullcontact.com//
   tags: FullContact
   properties:
@@ -162,6 +162,8 @@ x-common:
   url: https://twitter.com/FullContactAPI
 - type: x-twitter
   url: https://twitter.com/FullContact
+- type: x-website
+  url: http://fullcontact.com
 - type: x-website
   url: http://www.fullcontact.com
 include: []
